@@ -19,7 +19,6 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),yellowstone)
 
 include $(CLEAR_VARS)
-<<<<<<< HEAD
 LOCAL_MODULE := audio.primary.tegra
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SRC_FILES := proprietary/vendor/lib/hw/audio.primary.tegra.so
