@@ -34,6 +34,14 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib/hw
 include $(BUILD_PREBUILT)
 
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libaudiopolicymanager
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_SRC_FILES := proprietary/vendor/lib/libaudiopolicymanager.so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
+#include $(BUILD_PREBUILT)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := audio.nvrc.tegra
 LOCAL_MODULE_SUFFIX := .so

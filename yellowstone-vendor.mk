@@ -16,7 +16,6 @@
 
 PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libphs.so:system/vendor/lib/libphs.so \
-    vendor/google/yellowstone/proprietary/vendor/lib/hw/audio.primary.tegra.so:system/vendor/lib/hw/audio.primary.tegra.so \
     vendor/google/yellowstone/proprietary/bin/rm_ts_server:system/vendor/bin/rm_ts_server \
     vendor/google/yellowstone/proprietary/etc/firmware/nvavp_aud_ucode.bin:system/etc/firmware/nvavp_aud_ucode.bin \
     vendor/google/yellowstone/proprietary/etc/firmware/nvavp_os_0ff00000.bin:system/etc/firmware/nvavp_os_0ff00000.bin \
@@ -103,7 +102,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libmplmpu \
     libnvos \
-    libaudiopolicymanager \
     audio.primary.tegra \
     audio.nvwc.tegra \
     audio.nvrc.tegra \
