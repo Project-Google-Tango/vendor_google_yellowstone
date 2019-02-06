@@ -19,6 +19,7 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),yellowstone)
 
 include $(CLEAR_VARS)
+<<<<<<< HEAD
 LOCAL_MODULE := audio.primary.tegra
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_SRC_FILES := proprietary/vendor/lib/hw/audio.primary.tegra.so
@@ -65,16 +66,6 @@ LOCAL_SRC_FILES := proprietary/vendor/lib/libnvaudiofx.so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
 LOCAL_REQUIRED_MODULES := libc libc++ libdl libm libc libc++ libdl libm
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libmplmpu
-LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := proprietary/lib/libmplmpu.so
-LOCAL_MULTILIB := 32
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
