@@ -18,6 +18,17 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),yellowstone)
 
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := Camera2
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_SRC_FILES := proprietary/app/Camera2.apk
+#LOCAL_PREBUILT_JNI_LIBS :=
+#LOCAL_CERTIFICATE := platform
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_OVERRIDES_PACKAGES := Camera Camera2
+#LOCAL_PRIVILEGED_MODULE := false
+#include $(BUILD_PREBUILT)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := audio.primary.tegra
 LOCAL_MODULE_SUFFIX := .so
@@ -34,13 +45,13 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib/hw
 include $(BUILD_PREBUILT)
 
-#include $(CLEAR_VARS)
-#LOCAL_MODULE := libaudiopolicymanager
-#LOCAL_MODULE_SUFFIX := .so
-#LOCAL_SRC_FILES := proprietary/vendor/lib/libaudiopolicymanager.so
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
-#include $(BUILD_PREBUILT)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libstagefrighthw
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/libstagefrighthw.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := audio.nvrc.tegra
@@ -65,6 +76,14 @@ LOCAL_SRC_FILES := proprietary/vendor/lib/libnvaudiofx.so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
 LOCAL_REQUIRED_MODULES := libc libc++ libdl libm libc libc++ libdl libm
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := camera.tegra
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/hw/camera.tegra.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
